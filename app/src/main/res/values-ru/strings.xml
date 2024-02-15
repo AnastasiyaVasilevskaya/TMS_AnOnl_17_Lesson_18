@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">first</string>
+    <string name="authorization">Авторизация</string>
+    <string name="email">Email</string>
+    <string name="email_hint">Email</string>
+    <string name="email_annotation">Отправим письмо с кодом подтверждения</string>
+    <string name="button_next">ДАЛЕЕ</string>
+    <string name="button_next_annotation">Нажимая кнопку ДАЛЕЕ, я соглашаюсь с правилами использования приложения</string>
+</resources>
