@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">first</string>
     <string name="authorization">Authorization</string>
+    <string name="email_top_hint" translatable="false">Email</string>
     <string name="email" translatable="false">Email</string>
-    <string name="email_hint" translatable="false">Email</string>
     <string name="email_annotation">We will send an email with a confirmation code</string>
     <string name="button_next">NEXT</string>
-    <string name="button_next_annotation">By clicking the button NEXT I agree to the terms of use of the application</string>
+    <string name="button_next_hint">By clicking the button NEXT I agree to the terms of use of the application</string>
 
 </resources>
