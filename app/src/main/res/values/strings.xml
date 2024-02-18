@@ -5,6 +5,9 @@
     <string name="email" translatable="false">Email</string>
     <string name="email_annotation">We will send an email with a confirmation code</string>
     <string name="button_next">NEXT</string>
+    <string name="buttonNext_toThirdActivity">TO 3</string>
+    <string name="buttonNext_toFourthActivity">TO 4</string>
+    <string name="buttonNext_toFifthActivity">TO 5</string>
     <string name="button_next_hint">By clicking the button NEXT I agree to the terms of use of the application</string>
 
 </resources>

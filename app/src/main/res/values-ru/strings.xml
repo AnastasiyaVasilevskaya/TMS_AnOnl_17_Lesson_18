@@ -6,5 +6,8 @@
     <string name="email">Email</string>
     <string name="email_annotation">Отправим письмо с кодом подтверждения</string>
     <string name="button_next">ДАЛЕЕ</string>
+    <string name="buttonNext_toThirdActivity">НА 3</string>
+    <string name="buttonNext_toFourthActivity">НА 4</string>
+    <string name="buttonNext_toFifthActivity">НА 5</string>
     <string name="button_next_hint">Нажимая кнопку ДАЛЕЕ, я соглашаюсь с правилами использования приложения</string>
 </resources>
