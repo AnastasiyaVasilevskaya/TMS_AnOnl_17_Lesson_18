@@ -68,6 +68,7 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_background"
         android:text="@string/button_next"
+        android:textSize="16sp"
         android:textColor="#F6F5F4"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button_next_hint"
