@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val nextButton: Button = findViewById(R.id.nextButton)
+        val nextButton: Button = findViewById(R.id.next_button)
         nextButton.setOnClickListener {
             val handler = Handler(Looper.getMainLooper())
             handler.postDelayed({
