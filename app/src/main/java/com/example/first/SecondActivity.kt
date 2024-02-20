@@ -11,20 +11,18 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val backButton: ImageView = findViewById(R.id.back_button)
-        backButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
+        findViewById<ImageView>(R.id.back_button).setOnClickListener {
+            finish()
         }
 
-        val buttonToThird: Button = findViewById(R.id.button_to_third)
-        buttonToThird.setOnClickListener {
+
+        findViewById<Button>(R.id.button_to_third).setOnClickListener {
             val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
         }
 
-        val buttonToFourth: Button = findViewById(R.id.button_to_fourth)
-        buttonToFourth.setOnClickListener {
+        findViewById<Button>(R.id.button_to_fourth).setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
             startActivity(intent)
         }

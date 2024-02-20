@@ -10,10 +10,8 @@ class ThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third)
 
-        val backButton: ImageView = findViewById(R.id.back_button)
-        backButton.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.back_button).setOnClickListener {
+            finish()
         }
     }
 }

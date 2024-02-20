@@ -10,10 +10,8 @@ class FifthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fifth)
 
-        val backButton: ImageView = findViewById(R.id.back_button)
-        backButton.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            startActivity(intent)
+        findViewById<ImageView>(R.id.back_button).setOnClickListener {
+            finish()
         }
     }
 }
