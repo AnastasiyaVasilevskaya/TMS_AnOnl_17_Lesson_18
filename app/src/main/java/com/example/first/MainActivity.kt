@@ -24,14 +24,8 @@ class MainActivity : AppCompatActivity() {
         passwordTextWatcher()
 
         binding.nextButton.setOnClickListener() {
-            val validEmail = binding.emailContainer.helperText == "Correct"
-            val validPassword = binding.passwordContainer.helperText == "Correct"
-
-            if (validEmail && validPassword) {
-                val intent = Intent(this, SecondActivity::class.java)
-                startActivity(intent)
-            }
-
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -42,31 +36,29 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 emailHelperText()
+
             }
 
             override fun afterTextChanged(p0: Editable?) {}
         })
     }
 
-
-    private fun validEmail(): String {
+    private fun validEmail(): Boolean {
         val enteredEmail = binding.emailEditText.text.toString().trim()
-        if (!Patterns.EMAIL_ADDRESS.matcher(enteredEmail).matches()) {
-            return "Invalid email"
-        }
-        return "Correct"
+        return Patterns.EMAIL_ADDRESS.matcher(enteredEmail).matches()
     }
 
     private fun emailHelperText() {
-        binding.emailContainer.helperText = validEmail()
-
-        if (validEmail() == "Correct") {
+        if (validEmail()) {
+            binding.emailContainer.helperText = "Correct"
             val colorGreen = ContextCompat.getColor(this, R.color.green)
             binding.emailContainer.setHelperTextColor(ColorStateList.valueOf(colorGreen))
         } else {
+            binding.emailContainer.helperText = "Invalid email"
             val colorRed = ContextCompat.getColor(this, R.color.red)
             binding.emailContainer.setHelperTextColor(ColorStateList.valueOf(colorRed))
         }
+        updateButtonState()
     }
 
 
@@ -83,25 +75,26 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun validPassword(): String {
-        val passwordText = binding.passwordEditText.text.toString().trim()
-        if (passwordText.length < 6) {
-            return "Invalid password. Minimum 6 characters"
-        }
-        return "Correct"
+    private fun validPassword(): Boolean {
+        return binding.passwordEditText.text.toString().trim().length > 5
+
     }
 
     private fun passwordHelperText() {
-        binding.passwordContainer.helperText = validPassword()
-
-        if (validPassword() == "Correct") {
+        if (validPassword()) {
+            binding.passwordContainer.helperText = "Correct"
             val colorGreen = ContextCompat.getColor(this, R.color.green)
             binding.passwordContainer.setHelperTextColor(ColorStateList.valueOf(colorGreen))
         } else {
+            binding.passwordContainer.helperText = "Invalid password. Minimum 6 characters"
             val colorRed = ContextCompat.getColor(this, R.color.red)
             binding.passwordContainer.setHelperTextColor(ColorStateList.valueOf(colorRed))
         }
+        updateButtonState()
     }
 
-
+    //Активация кнопки
+    private fun updateButtonState() {
+        binding.nextButton.isEnabled = validEmail() && validPassword()
+    }
 }
