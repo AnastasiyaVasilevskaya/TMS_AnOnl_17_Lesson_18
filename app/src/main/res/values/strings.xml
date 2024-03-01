@@ -9,5 +9,7 @@
     <string name="buttonNext_toFourthActivity">TO 4</string>
     <string name="buttonNext_toFifthActivity">TO 5</string>
     <string name="button_next_hint">By clicking the button NEXT I agree to the terms of use of the application</string>
+    <string name="required">Required</string>
+    <string name="password">Password</string>
 
 </resources>

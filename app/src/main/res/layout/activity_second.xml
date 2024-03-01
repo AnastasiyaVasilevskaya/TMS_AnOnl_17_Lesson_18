@@ -16,34 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_to_third"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="450dp"
-        android:background="@drawable/button_background2"
-        android:text="@string/buttonNext_toThirdActivity"
-        android:textSize="16sp"
-        android:textColor="#FFC107"
-        app:backgroundTint="#3A393C"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_to_fourth"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background2"
-        android:text="@string/buttonNext_toFourthActivity"
-        android:textSize="16sp"
-        android:textColor="#905AF1"
-        app:backgroundTint="#3A393C"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_to_third" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

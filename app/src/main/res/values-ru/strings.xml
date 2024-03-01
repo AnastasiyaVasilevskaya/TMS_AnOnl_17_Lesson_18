@@ -10,4 +10,6 @@
     <string name="buttonNext_toFourthActivity">НА 4</string>
     <string name="buttonNext_toFifthActivity">НА 5</string>
     <string name="button_next_hint">Нажимая кнопку ДАЛЕЕ, я соглашаюсь с правилами использования приложения</string>
+    <string name="required">Required</string>
+    <string name="password">Password</string>
 </resources>
