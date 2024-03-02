@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
+import android.widget.RadioButton
 import androidx.core.content.ContextCompat
 import com.example.first.databinding.ActivityMainBinding
 
@@ -25,6 +26,29 @@ class MainActivity : AppCompatActivity() {
 
         binding.nextButton.setOnClickListener() {
             val intent = Intent(this, SecondActivity::class.java)
+
+            // Добавляем данные о почте и пароле
+            intent.putExtra("email", binding.emailEditText.text.toString())
+            intent.putExtra("password", binding.passwordEditText.text.toString())
+
+            // Добавляем данные о состоянии чекбоксов
+            if (binding.checkBox1.isChecked) {
+                val selectedCheckBoxText = binding.checkBox1.text.toString()
+                intent.putExtra("checkBox1Checked", selectedCheckBoxText)
+            }
+
+            if (binding.checkBox2.isChecked) {
+                val selectedCheckBoxText = binding.checkBox2.text.toString()
+                intent.putExtra("checkBox2Checked", selectedCheckBoxText)
+            }
+
+            //РадиоБаттон
+            val selectedRadioButtonId = binding.radioGroup.checkedRadioButtonId
+            selectedRadioButtonId.let { id ->
+                val selectedRadioButtonText = findViewById<RadioButton>(id)?.text?.toString() ?: "No RadioButton selected"
+                intent.putExtra("radioButtonSelected", selectedRadioButtonText)
+            }
+
             startActivity(intent)
         }
     }
