@@ -1,15 +1,20 @@
 <resources>
     <string name="app_name">first</string>
     <string name="authorization">Authorization</string>
-    <string name="email_top_hint" translatable="false">Email</string>
     <string name="email" translatable="false">Email</string>
     <string name="email_annotation">We will send an email with a confirmation code</string>
     <string name="button_next">NEXT</string>
-    <string name="buttonNext_toThirdActivity">TO 3</string>
-    <string name="buttonNext_toFourthActivity">TO 4</string>
-    <string name="buttonNext_toFifthActivity">TO 5</string>
     <string name="button_next_hint">By clicking the button NEXT I agree to the terms of use of the application</string>
     <string name="required">Required</string>
     <string name="password">Password</string>
+    <string name="question">What kind of vacation do you prefer?</string>
+    <string name="radio1">Active</string>
+    <string name="radio2">Calm</string>
+    <string name="radio3">Mixed</string>
+    <string name="mess1">Receive notifications about important events and promotions</string>
+    <string name="mess2">Subscribe to our newsletter to receive special offers</string>
+    <string name="correct">Correct</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="invalid_password_mess">Invalid password. Minimum 6 characters</string>
 
 </resources>

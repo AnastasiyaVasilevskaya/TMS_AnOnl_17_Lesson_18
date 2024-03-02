@@ -2,14 +2,19 @@
 <resources>
     <string name="app_name">first</string>
     <string name="authorization">Авторизация</string>
-    <string name="email_top_hint">Email</string>
     <string name="email">Email</string>
     <string name="email_annotation">Отправим письмо с кодом подтверждения</string>
     <string name="button_next">ДАЛЕЕ</string>
-    <string name="buttonNext_toThirdActivity">НА 3</string>
-    <string name="buttonNext_toFourthActivity">НА 4</string>
-    <string name="buttonNext_toFifthActivity">НА 5</string>
     <string name="button_next_hint">Нажимая кнопку ДАЛЕЕ, я соглашаюсь с правилами использования приложения</string>
-    <string name="required">Required</string>
+    <string name="required">Обязательное поле</string>
     <string name="password">Password</string>
+    <string name="question">Какой вид отдыха предпочитаете?</string>
+    <string name="radio1">Активный</string>
+    <string name="radio2">Спокойный</string>
+    <string name="radio3">Смешанный</string>
+    <string name="mess1">Получать уведомления о важных событиях и акциях.</string>
+    <string name="mess2">Подписаться на нашу рассылку для получения специальных предложений</string>
+    <string name="correct">Корректно</string>
+    <string name="invalid_email">Некорректный адрес эл. почты</string>
+    <string name="invalid_password_mess">Пароль должен содержать минимум 6 символов</string>
 </resources>

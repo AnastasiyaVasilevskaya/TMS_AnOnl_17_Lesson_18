@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
 import androidx.core.content.ContextCompat
 import com.example.first.databinding.ActivityMainBinding
 
@@ -20,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        updateButtonState()
         emailTextWatcher()
         passwordTextWatcher()
 
@@ -50,11 +50,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun emailHelperText() {
         if (validEmail()) {
-            binding.emailContainer.helperText = "Correct"
+            binding.emailContainer.helperText = getString(R.string.correct)
             val colorGreen = ContextCompat.getColor(this, R.color.green)
             binding.emailContainer.setHelperTextColor(ColorStateList.valueOf(colorGreen))
         } else {
-            binding.emailContainer.helperText = "Invalid email"
+            binding.emailContainer.helperText = getString(R.string.invalid_email)
             val colorRed = ContextCompat.getColor(this, R.color.red)
             binding.emailContainer.setHelperTextColor(ColorStateList.valueOf(colorRed))
         }
@@ -82,11 +82,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun passwordHelperText() {
         if (validPassword()) {
-            binding.passwordContainer.helperText = "Correct"
+            binding.passwordContainer.helperText = getString(R.string.correct)
             val colorGreen = ContextCompat.getColor(this, R.color.green)
             binding.passwordContainer.setHelperTextColor(ColorStateList.valueOf(colorGreen))
         } else {
-            binding.passwordContainer.helperText = "Invalid password. Minimum 6 characters"
+            binding.passwordContainer.helperText = getString(R.string.invalid_password_mess)
             val colorRed = ContextCompat.getColor(this, R.color.red)
             binding.passwordContainer.setHelperTextColor(ColorStateList.valueOf(colorRed))
         }
